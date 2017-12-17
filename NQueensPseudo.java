@@ -59,15 +59,49 @@ public class NQueenTester
 		int upperBound = 0;
 		int lowerBound = 0;
 		int integerSolution = 0;
+		boolean solution = false;
+		boolean notEnoughOrTooManyOnes = false;
+		int ones = 0;
+		char number = ' ';
+		int binaryConvert = 0;
+		String binary = "";
+
+		for (int x = 0; x<n; x++)
+		{
+			lowerBound = lowerBound + Math.pow(2,x);
+		}
+		
+		k = lowerBound;
+
+		for (int y = 0; y>(n*(n-1)); y=y-1)
+		{
+			upperBound = upperBound + Math,pow(2,y);
+		}
 		
 
-		while k is less than its upper bound
+		while (k<upperBound)
 			{
-				if solution is false
+				if (solution == false)
 				{
-					convert k to binary
+					binaryConvert = k;
+					while (binaryConvert > 0)
+					{
+						//convert k to binary
+						counter = (binaryConvert%2)
+						binary = "" + counter + binary;
+						binaryConvert = binaryConvert/2;
+						
+						
+					}
 
-					check the number of ones
+					binary = "1" + binary;
+
+					zeroesAdd = (n*n) - binary.length();
+					
+					for (int p = 0; p<zeroesAdd; p++)
+					{
+						binary
+					}
 
 					if ones != n, not enough or too many ones = true
 
@@ -86,7 +120,7 @@ public class NQueenTester
 						if these tests are all passed
 						{
 							solution = true
-						}
+						} 
 
 					
 
@@ -95,7 +129,7 @@ public class NQueenTester
 					
 					
 				}
-				if solution is true
+				if (solution == true)
 				{
 					solutions = solutions + 1;
 					solution = false;
